@@ -14,6 +14,8 @@
     \RenewDocumentCommand {\arraystretch} { } {#1}
 }
 
+\RequirePackage{setspace}
+
 \RequirePackage{colortbl}
 
 \RequirePackage{xcolor}
@@ -21,6 +23,7 @@
 \definecolor{light-gray}{gray}{0.8}
 
 \NewDocumentEnvironment {versions} { } {%
+\begin{singlespacing}
 \AdjustArrayStretch{1.2}
 \begin{longtable}{@{} p{0.15\textwidth} @{\hspace{0.033\textwidth}} p{0.1\textwidth} @{\hspace{0.033\textwidth}} p{0.15\textwidth} @{\hspace{0.033\textwidth}} p{0.5\textwidth} @{}}
     \arrayrulecolor{black}\toprule[1pt]
@@ -45,6 +48,7 @@
     \tabularnewline
     \arrayrulecolor{light-gray}\bottomrule[0.5pt]
 \end{longtable}
+\end{singlespacing}
 }
 
 \NewDocumentCommand {\version} { s m m m } {%

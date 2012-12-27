@@ -10,6 +10,8 @@
     \RenewDocumentCommand {\arraystretch} { } {#1}
 }
 
+\RequirePackage{setspace}
+
 \NewDocumentCommand {\GivenCwiczenie} { } {3}
 \NewDocumentCommand {\GivenMeta} { } {}
 \NewDocumentCommand {\GivenTytul} { } {WAAAGH Dokumenta Tirrra Apartaaah!!!}
@@ -36,6 +38,7 @@
 }
 
 \NewDocumentCommand {\MakeDokumentMeta} { } {%
+\begin{singlespacing}
 \AdjustArrayStretch{1.2}
 \begin{longtable}{@{} p{0.10\textwidth} @{\hspace{0.05\textwidth}} p{0.85\textwidth} @{}}
     \toprule[2pt]
@@ -47,4 +50,5 @@
     \textbf{Autorzy} & \GivenAutorzy \\
     \bottomrule[2pt]
 \end{longtable}
+\end{singlespacing}
 }
