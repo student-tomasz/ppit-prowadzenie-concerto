@@ -48,17 +48,17 @@ zwłaszcza gdy zobaczyli plakat biegnąc na wykład, by uniknąć spóźnienia.
 
 System Concerto składa się trzech komponentów:
 \begin{enumerate}
-    \item aplikacja mobilna dla adresatów akcji reklamowych,
-    \item serwer obsługi zapytań aplikacji mobilnych,
-    \item API udostępniane organizatorom do zarządzania informacjami o ich
-        wydarzeniach kulturalnych.
+    \item \textbf{aplikacja mobilna} dla adresatów akcji reklamowych,
+    \item \textbf{serwer obsługi zapytań} aplikacji mobilnych,
+    \item \textbf{API udostępniane organizatorom} do zarządzania informacjami o
+        ich wydarzeniach kulturalnych.
 \end{enumerate}
 Schemat współpracy komponentów jest przedstawiony
 na~stronie~\pageref{fig:schemat_komponentow}.
 
 \subsection{Aplikacja mobilna}
-Głównym celem aplikacji mobilnej jest dostarczenie informacji o wydarzeniu oraz
-zaproponowanie kupna biletu w sklepie internetowym organizatora.
+Głównym celem aplikacji mobilnej jest dostarczenie użytkownikowi informacji o
+wydarzeniu oraz zaproponowanie kupna biletu w sklepie internetowym organizatora.
 
 Po uruchomieniu aplikacji użytkownik robi zdjęcie plakatu, który go
 zainteresował. Aplikacja wysyła zdjęcie do serwera obsługi zapytań i oczekuje na
@@ -71,15 +71,16 @@ popularnych sieci społecznościowych oraz standardowych środków komunikacji,
 takich jak email czy SMS.
 
 \subsection{Serwer obsługi zapytań}
-Serwer obsługi zapytań jest oddzielną usługą dostępną przez połączenie
-internetowe. Serwer oferujący usługę posiada bazę danych z plakatami i
-informacjami o wydarzeniach przez nie reklamowanymi. Po otrzymaniu zapytania,
-porównuje zdjęcie z plakatami z bazy i zwraca informacje przypisane do plakatu.
+Serwer obsługi zapytań jest dostępny przez połączenie internetowe. Serwer
+posiada bazę danych z informacjami o wydarzeniach, w szczególności obrazy
+plakatów wykorzystywanych w akcjach reklamowych. Po otrzymaniu zapytania,
+serwer porównuje zdjęcie z plakatami z bazy i zwraca informacje przypisane do
+plakatu.
 
 \subsection{API zarządzania bazą wydarzeń}
-System ściśle współpracujący z serwerem obsługi zapytań. Pozwala agencjom
-reklamowym na dodawanie plakatów i informacji o nadchodzących wydarzeniach do
-systemu obsługi zapytań.
+System ściśle współpracujący z serwerem obsługi zapytań. Pozwala organizatorom
+wydarzeń na zarządzanie plakatami i informacjami o wydarzeniach do serwera
+obsługi zapytań.
 
 \subsection{Współpraca komponentów}
 \begin{figure}[h!]
@@ -110,6 +111,8 @@ systemu obsługi zapytań.
         Dodano załącznik ze schematem komponentów.
     \version{1.3}{2012-12-27}{TC}%
         Przekonwertowano do aktualnego formatu dokumentów.
+    \version{1.4}{2012-12-27}{TC}%
+        Poprawiono szczegóły w opisach komponentów systemu.
     \version{2.0}{2012-12-27}{TC}%
         Sprawdzono i zatwierdzono.
 \end{versions}
