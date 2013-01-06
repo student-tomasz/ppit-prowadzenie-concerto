@@ -38,6 +38,43 @@ oprogramowania \textsc{FURPS}.
     \weight 5
 \end{requirement}
 
+\subsubsection{Lokalizacja}
+\begin{requirement}
+    \desc%
+        Wielojęzyczność zapewniająca możliwość korzystania z systemu przez osoby
+        nieznające języka natywnego.
+    \metric%
+        Ilość obsługiwanych języków.
+    \tool%
+        Lista kontrolna.
+    \scale%
+        \emph{1} --- Dostępna tylko wersja w języku polskim.\\
+        \emph{3} --- Dostępna wersja w języku polskim oraz angielskim.\\
+        \emph{5} --- Obsługa więcej niż dwóch języków, z możliwoścą łatwego
+            dodania nowych lokalizacji.
+    \weight 2
+\end{requirement}
+
+\subsubsection{Pomoc}
+\begin{requirement}
+    \desc%
+        Samouczki dla użytkowników aplikacji mobilnej. Dokumentacja techniczna
+        API dla organizatorów współpracujących.
+    \metric%
+        Ilość dostępnych materiałów szkoleniowych.
+    \tool%
+        Lista kontrolna.
+    \scale%
+        \emph{1} --- Brak materiałów.\\
+        \emph{2} --- Dokumentacja techniczna API dla współpracujących
+            organizatorów.\\
+        \emph{3} --- Samouczek w aplikacji mobilnej. Dokumentacja techniczna API
+            dla współpracujących organizatorów.\\
+        \emph{5} --- Samouczek w aplikacji mobilnej. Dokumentacja techniczna API
+            oraz szkolenia dla współpracujących organizatorów.
+    \weight 2
+\end{requirement}
+
 \subsubsection{Drukowanie}
 \begin{requirement}
     \desc%
@@ -94,43 +131,6 @@ oprogramowania \textsc{FURPS}.
         \emph{5} --- Wyszukiwanie, dodawanie, edycja i usuwanie wydarzeń.
     \weight%
         4
-\end{requirement}
-
-\subsubsection{Lokalizacja}
-\begin{requirement}
-    \desc%
-        Wielojęzyczność zapewniająca możliwość korzystania z systemu przez osoby
-        nieznające języka natywnego.
-    \metric%
-        Ilość obsługiwanych języków.
-    \tool%
-        Lista kontrolna.
-    \scale%
-        \emph{1} --- Dostępna tylko wersja w języku polskim.\\
-        \emph{3} --- Dostępna wersja w języku polskim oraz angielskim.\\
-        \emph{5} --- Obsługa więcej niż dwóch języków, z możliwoścą łatwego
-            dodania nowych lokalizacji.
-    \weight 2
-\end{requirement}
-
-\subsubsection{Pomoc}
-\begin{requirement}
-    \desc%
-        Samouczki dla użytkowników aplikacji mobilnej. Dokumentacja techniczna
-        API dla organizatorów współpracujących.
-    \metric%
-        Ilość dostępnych materiałów szkoleniowych.
-    \tool%
-        Lista kontrolna.
-    \scale%
-        \emph{1} --- Brak materiałów.\\
-        \emph{2} --- Dokumentacja techniczna API dla współpracujących
-            organizatorów.\\
-        \emph{3} --- Samouczek w aplikacji mobilnej. Dokumentacja techniczna API
-            dla współpracujących organizatorów.\\
-        \emph{5} --- Samouczek w aplikacji mobilnej. Dokumentacja techniczna API
-            oraz szkolenia dla współpracujących organizatorów.
-    \weight 2
 \end{requirement}
 
 
@@ -227,6 +227,25 @@ oprogramowania \textsc{FURPS}.
 
 \subsection{Wydajność}
 
+\subsubsection{Czas odpowiedzi}
+\begin{requirement}
+    \desc%
+        Czas od wysłania zdjęcia przez użytkownika do uzyskania informacji
+        zwrotnej o wydarzeniu.
+    \metric%
+        Liczba sekund między wysłaniem żądania a otrzymaniem odpowiedzi.
+    \tool%
+        Histogram.
+    \scale%
+        \emph{1} --- Dłuższy niż 15 sekund.\\
+        \emph{2} --- Od 10 do 15 sekund.\\
+        \emph{3} --- Od 6 do 9 sekund.\\
+        \emph{4} --- Od 3 do 6 sekund.\\
+        \emph{5} --- Poniżej 3 sekund.
+    \weight%
+        3
+\end{requirement}
+
 \subsubsection{Przepustowość}
 \begin{requirement}
     \desc%
@@ -262,27 +281,27 @@ oprogramowania \textsc{FURPS}.
         5
 \end{requirement}
 
-\subsubsection{Czas odpowiedzi}
-\begin{requirement}
-    \desc%
-        Czas od wysłania zdjęcia przez użytkownika do uzyskania informacji
-        zwrotnej o wydarzeniu.
-    \metric%
-        Liczba sekund między wysłaniem żądania a otrzymaniem odpowiedzi.
-    \tool%
-        Histogram.
-    \scale%
-        \emph{1} --- Dłuższy niż 15 sekund.\\
-        \emph{2} --- Od 10 do 15 sekund.\\
-        \emph{3} --- Od 6 do 9 sekund.\\
-        \emph{4} --- Od 3 do 6 sekund.\\
-        \emph{5} --- Poniżej 3 sekund.
-    \weight%
-        3
-\end{requirement}
-
 
 \subsection{Wsparcie}
+
+\subsubsection{Łatwość testowania}
+\begin{requirement}
+    \desc%
+        Polega na określeniu kompletności dokumentacji i zaawansowania
+        procesu testowania. Automatyczny zestaw testów, o wysokim
+        pokryciu, ułatwia zarządzanie i wprowadzanie zmian do systemu.
+    \metric%
+        Łatwość przeprowadzania testów.
+    \tool%
+        Lista kontrolna.
+    \scale%
+        \emph{1} --- Brak automatycznych testów i niekompletność dokumentacji.\\
+        \emph{2} --- System posiada kompletną dokumentację, ale testy muszą zostać utworzone od podstaw.\\
+        \emph{4} --- Automatyczne testy dla krytycznych funkcji systemu.\\
+        \emph{5} --- Automatyczne testy dla wszystkich funkcji systemu.
+    \weight%
+        5
+\end{requirement}
 
 \subsubsection{Skalowalność}
 \begin{requirement}
@@ -299,25 +318,6 @@ oprogramowania \textsc{FURPS}.
         \emph{1} --- Wymagana jest zmiana architektury i kodu systemu.\\
         \emph{3} --- Wymagane jest ręczne zarządzenie instancjami serwerów przez zespół projektowy. Bez konieczności modyfikacji kodu systemu.\\
         \emph{5} --- System automatycznie zarządza liczbą aktywnych instacji serwerów zależnie od obciążenia systemu.
-    \weight%
-        5
-\end{requirement}
-
-\subsubsection{Testowalność}
-\begin{requirement}
-    \desc%
-        Polega na określeniu kompletności dokumentacji i zaawansowania
-        procesu testowania. Automatyczny zestaw testów, o wysokim
-        pokryciu, ułatwia zarządzanie i wprowadzanie zmian do systemu.
-    \metric%
-        Łatwość przeprowadzania testów.
-    \tool%
-        Lista kontrolna.
-    \scale%
-        \emph{1} --- Brak automatycznych testów i niekompletność dokumentacji.\\
-        \emph{2} --- System posiada kompletną dokumentację, ale testy muszą zostać utworzone od podstaw.\\
-        \emph{4} --- Automatyczne testy dla krytycznych funkcji systemu.\\
-        \emph{5} --- Automatyczne testy dla wszystkich funkcji systemu.
     \weight%
         4
 \end{requirement}
@@ -356,6 +356,16 @@ oprogramowania \textsc{FURPS}.
     \weight%
         3
 \end{requirement}
+
+
+\newpage
+\section*{Schemat wymagań projektu}
+
+\begin{figure}[h!]
+    \includegraphics[trim=4cm 0cm 4cm 0cm,width=\textwidth]{./figury/schemat-do-modelu-jakosci}
+    \caption{Schemat wymagań projektu \emph{Concerto}.}
+    \label{fig:schemat}
+\end{figure}
 
 
 \newpage
