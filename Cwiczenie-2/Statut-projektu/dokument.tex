@@ -5,8 +5,8 @@
 
 \Cwiczenie{2}
 \Tytul{Statut projektu}
-\Data{2012-12-27}
-\Wersja{3.0}
+\Data{2012-01-03}
+\Wersja{1.2}
 \Autorzy{TC, DG, MM, MO}
 \MakeDokumentMeta
 
@@ -36,6 +36,8 @@ kompenentów:
     \item \textbf{API udostępniane organizatorom} do zarządzania informacjami o
         reklamowanych wydarzeniach kulturalnych.
 \end{enumerate}
+Dokładny opis komponentów znajduje się na~stronie~\pageref{sec:produkty}.
+
 
 \subsection{Podcele nietechniczne}
 
@@ -68,10 +70,138 @@ zadowalających przychodów możliwa jest zmiana polityki rozwoju. Alternatywną
 wydarzeń z warunkiem eksluzywności.
 
 
-\section{Reszta}
+\section{Produkty}
+\label{sec:produkty}
+System \emph{Concerto} składa się z trzech, wymienionych jako cele techniczne,
+komponentów.
 
-Reszta jest \textsc{TODO}. Generalnie trzeba skopiować te paragrafy, które
-zostaną na mapie pamięci.
+\subsection{Aplikacja mobilna}
+Aplikacja na urządzenia mobilne kierowana jest do adresatów akcji reklamowych.
+Umożliwia zakup biletów na reklamowane wydarzenie. Dodatkowo pozwala na
+przekazanie zaproszeń na wydarzenie znajomym użytkownika. Aplikacja jest cienkim
+klientem, obróbka zdjęcia i znalezienie adekwatnych informacji jest przekazywane
+do serwera obsługi zapytań. Szacowany koszt wykonania to 42,000pln.
+
+\subsection{Serwer obsługi zapytań}
+Serwer obsługi zapytań porównuje przesłane przez użytkownika zdjęcie, ze
+zdjęciami znajdującymi się w bazie danych i zwraca informacje przypisane do
+odnalezionego plakatu. Jest to najbardziej złożony element systemu.
+Koszt realizacji to 63,000pln.
+
+\subsection{API dla organizatorów}
+API do zarządzania bazą danych wydarzeń jest udostępniane wyłącznie
+współpracującym organizatorom. Pozwala na zarządzanie informacjami o
+wydarzeniach. Głównym zadaniem jest dodawanie plakatów wraz z opisem, datą i
+miejscem nadchodzących wydarzeń. Oceniamy, że koszt stworzenia API nie powinien
+przekroczyć 49,000pln.
+
+
+\section{Artefakty}
+
+\subsection{Dokumentacja techniczna serwera}
+Dokumentacja techniczna serwera opisuje implementację serwera obsługi
+zapytań. Przeznaczona jest do użytku wewnętrznego zespołu projektowego systemu
+\emph{Concerto}.
+
+\subsection{Dokumentacja techniczna API}
+Dokumentacja techniczna API jest udostępniana współpracującym organizatorom.
+
+\subsection{Dokumentacja procesu testowania}
+Dokumentacja procesu testowania zawiera przebieg procesów testowania. Do użytku
+wewnętrznego.
+
+\subsection{Statut projektu}
+Statut projektu opisuje najważniejsze zagadnienia projektu. Opisuje cel,
+założenia i zakres całego projektu.
+
+
+\section{Wyznaczniku sukcesu}
+
+\subsection{Nawiązanie współpracy z organizatorami koncertów}
+Za satysfakcjonujące uznamy nawiązanie współpracy z ilością organizatorów
+zapewniające obsługiwanie przynajmniej 80\% koncertów w Warszawie i średnio 50\%
+koncertów organizowanych na terenie Polski.
+
+\subsection{Uzyskanie bazy aktywnych użytkowników}
+Pożądane jest, aby minimum 80\% zakupów biletów u współpracujących organizatorów
+odbywało się z polecenia aplikacji mobilnej.
+
+\subsection{Przychody przewyższają rozchody}
+Oczekujemy, że saldo systemu będzie oscylowało miesięcznie w granicach
+35,000pln.
+
+
+\section{Zasoby}
+
+\subsection{Zasoby materialne}
+
+\subsubsection{Serwer}
+Serwer jest ogólnym zasobem świadczącym usługi na rzecz aplikacji mobilnej.
+Przed wdrożeniem koszt utrzymania serwera jest pomijalnie niski z uwagi na
+znikome obciążenie generowane przez programistów/testerów. Wdrożenie projektu
+zakłada wynajęcie wirtualnego serwera od zewnętrznej firmy. Z uwagi na
+przewidywane wysokie obciążenie miesięczna cena wyniesie około 4,200usd.
+
+\subsubsection{Urządzenia mobilne}
+Zespół potrzebuje platformy testowej. Reprezentatywny zespół, aktualnie
+najpopularniejszych modeli telefonów komórkowych i tabletów. Służą do testowania
+aplikacji mobilnej. 7000pln powinno pokryć koszt zakupu.
+
+\subsubsection{Baza danych wydarzeń kulturalnych}
+Niezbędna do działania systemu jest baza zawierająca informacje o wydarzeniach
+kulturalnych takie jak ich opis, data, miejsce oraz plik z plakatem. Utrzymanie
+bazy danych jest pokryte w kosztach serwera. Zawartość bazy danych jest
+dostarczana przez współpracujących organizatorów.
+
+\subsection{Zasoby czasowe}
+Zespół ma jeden rok na realizację projektu.
+
+\subsection{Zasoby ludzkie}
+W zespole każda osoba ma określoną funkcję. Możemy wyróżnić:
+\begin{itemize}
+    \item \textbf{zespoły programistyczne} -- 4 osoby; programiści podzieleni są
+        na zespoły pracujące nad aplikacją mobilną, algorytmu pracującego po
+        stronie serwera oraz tworzenia i obsługi serwerów udostępniających API.
+        Każdy programista zarabia 40pln na godzinę.
+    \item \textbf{manager projektu i produktu} -- 1 osoba; koordynuje pracę,
+        odpowiada za prawidłowy przebieg projektu, oraz powstające produkty.
+        Jego stawka godzinowa wynosi 60pln.
+    \item \textbf{analityk} -- 1 osoba; wspomaga programistów odpowiedzialnych za serwer
+        obsługi zapytań, zarobki to 40pln na godzinę.
+\end{itemize}
+Niezbędne są również osoby z zewnątrz tj. przedstawiciele współpracujących
+organizatorów. Firmy, które nawiązały współpracę biznesową z firmą
+\emph{Concerto} biorą czynny udział w tworzeniu bazy wydarzeń kulturalnych.
+Elementem krytycznym jest by zachować aktualność bazy wydarzeń.
+
+
+\section{Ryzyko}
+Lista najistotniejszych ryzyk związanych z projektem znajduje się poniżej, zaś
+pełna taksonomia ryzyk zawarta jest w oddzielnym dokumencie.
+
+\begin{itemize}
+    \item \textbf{Złożoność systemu} -- Projekt zakłada rozdzielenie systemu na
+        kilka niezależnych modułów, które muszą ze sobą współpracować. Synchronizacja
+        rozwoju modułów i weryfikacja ich współpracy jest nietrywialna.
+    \item \textbf{Niewystarczające kwalifikacje i doświadczenie zespołu} --
+        Wymagana specjalistyczna wiedza z zakresu przetwarzania obrazów. Zebranie
+        zespołu posiadającego doświadczenie w tej dziedzinie jest nieopłacalne przy
+        dostępnych zasobach projektu. Zespół po szkoleniu nadal może nie posiadać
+        wystarczającej wiedzy.
+    \item \textbf{Zbyt mała liczba współpracujących organizatorów} -- Zbyt mała
+        ilość współpracujących organizatorów wydarzeń przełoży się na ubogą bazę
+        materiałów referencyjnych w bazie. Dodatkowo, każdy współpracownik jest
+        bezpośrednio związany z udzielanymi rabatami dla użytkowników. Zmniejszy to
+        atrakcyjność oferty.
+    \item \textbf{Sprawność operacyjna} -- Możliwe są problemy z efektywną
+        komunikacją między podsystemami oraz z zachowaniem uptime'u systemu przy
+        nieregularnych skokach obciążenia.
+    \item \textbf{Poparcie biznesowe} -- Wdrożenie projektu jest niemożliwe bez
+        wczesnego wsparcia finansowego inwestorów.
+    \item \textbf{Przyjęcie aplikacji mobilnej przez użytkowników} -- Użytkownicy
+        smartfonów mogą zignorować pojawienie się systemu \emph{Concerto}.
+\end{itemize}
+
 
 \newpage
 \section*{Historia dokumentu}
@@ -94,6 +224,9 @@ zostaną na mapie pamięci.
     \version{1.1}{2012-12-27}{TC}%
         Rozwinięto \emph{Cele projektu}. Usunięto sekcję \emph{Oczekiwane
         rezultaty}. Dodano \emph{Założenia opłacalności}.
+    \version{1.2}{2012-01-03}{MM, MO}%
+        Usunięto lub dodano paragrafy, by zachować spójność z mapą pamięci
+        projektu.
 \end{versions}
 
 
