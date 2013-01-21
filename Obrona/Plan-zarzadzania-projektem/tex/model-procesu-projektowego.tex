@@ -1,0 +1,53 @@
+\newpage
+\section{Model procesu projektowego}
+
+\subsection{Funkcje odbioru produktów}
+Projekt jest tworzony i odbierany przez ten sam zespół projektowy. Ewentualne
+nadanie współpracującym organizatorom roli mającej wpływ na produkty lub cele
+projektu jest rozpoznanym ryzykiem. Reakcją jest rozpatrzenie możliwości
+i ewentualne wdrożenie pivotu projektu, zależnie od warunków nawiązywanej
+współpracy.
+
+Projekt realizowany jest w trzech głównych, następujących po sobie iteracjach.
+Zakończenie każdej kolejnej iteracji rozszerza funkcjonalność produktów.
+Planowane iteracje to:
+\begin{itemize}[noitemsep]
+    \item \textbf{Iteracja A} -- Przygotowanie
+    \item \textbf{Iteracja B} -- Prototyp
+    \item \textbf{Iteracja C} -- Wdrożenie
+\end{itemize}
+
+Zadania i produkty iteracji \emph{Przygotowanie} mają na celu stworzenie
+szczegółowej dokumentacji wspomagającej i organizującej prace nad projektem. Po
+zakończeniu tej iteracji rozpoczęte zostają równolegle prace nad produktami
+projektu. Procesy testowania oraz integracji zachodzą możliwie ciągle.
+
+Planowane są dwa formalne przyjęcia produktów, po zakończeniu iteracji B i C.
+Akceptacja jest zadaniem zespołu projektowego. Ocena jest oparta o:
+\begin{enumerate}
+    \item Wytyczne dokumentu kontroli jakości w postaci zestawu testów
+        akceptacyjnych;
+    \item Wytyczne specyfikacji funkcjonalnej w postaci zestawu testów
+        funkcjonalnych.
+\end{enumerate}
+Opisana metoda oceny produktów jest stałym elementem procesu testowania, który
+zachodzi ciągle przez cały czas trwania prac. W efekcie zakończenie ostatniego
+zadania z danej iteracji, automatycznie kończy prace nad iteracją i zostaje ona
+przyjęta.
+
+Do zakończenia iteracji \emph{Prototyp} oczekiwana jest akceptacja krytycznych
+części funkcjonalności systemu. W przypadku nie uzyskania oceny pozytywnej
+przewidziane jest wydłużenie czasu trwania tej iteracji. Po zakończeniu iteracji
+\emph{Wdrożenie} dokonywana jest ocena pełnej funkcjonalności systemu. W
+przypadku spełnienia wytycznych projekt jest uznawany za zakończony. W
+przeciwnym przypadku planowane są zadania uzupełniające oraz rozszerzenie
+budżetu i harmonogramu pracy.
+
+\subsection{Synchronizacja wersji produktów}
+Synchronizacja wersji produktów jest prowadzona przez system kontroli wersji
+Git. Każdy produkt jest przechowywany w niezależnym repozytorium. Kiedy
+wszystkie produkty dojdą do milestone'ów synchronizujących określonych w
+harmonogramie pracy, ich milestone'owe rewizje zostają dodane do meta\dywiz
+repozytorium całego projektu. W ten sposób prace nad produktami mogą przebiegać
+niezależnie. Jednocześnie w pełni funkcjonalny produkt jest utrzymywany w
+meta\dywiz repozytorium głównym.

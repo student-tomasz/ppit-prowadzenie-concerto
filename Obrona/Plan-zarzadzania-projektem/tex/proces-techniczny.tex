@@ -1,0 +1,59 @@
+\newpage
+\section{Proces techniczny}
+
+\subsection{Metody, narzędzia i techniki}
+W ramach projektu zespół będzie stosował metodykę zwinną \emph{Kanban}.
+Narzędzia wspomagające metodykę są częścią pakietu usług firmy \emph{Atlassian}.
+\begin{enumerate}
+    \item Repozytoria kodu źródłowego dla systemów kontroli wersji oraz wiki z
+        dokumentami powiązanymi przetrzymywane są na platformie
+        \emph{Bitbucket}.
+    \item Lista zadań, śledzenie postępów oraz ewentualne dyskusje znajdują się
+        na platformie \emph{GreenHopper}.
+    \item Recenzje kodu odbywają się na poziomie głównego repozytorium.
+        Włączenia kodu, prośby i realizacja jego recenzji odbywa się na
+        \emph{Bitbucket}.
+    \item Automatyczne testowanie i zarządzanie aktualną wersją oprogramowania
+        serwerów produkcyjnych zarządzane są z platformy \emph{Bamboo}.
+\end{enumerate}
+Usługi są zintegrowane i dostępne wszystkim członkom zespołu projektowego.
+Komunikacja odbywa się w ramach wymienionych narzędzi, pomiędzy wszystkimi
+poziomami struktury organizacyjnej. Pozwala na to mały rozmiar zespołu
+projektowego oraz bezpośrednie zaangażowanie w prace techniczne nad produktami
+przez cały zespół.
+
+\subsubsection{Serwer obsługi zapytań i API}
+Do utworzenia serwera i API wykorzystany będzie stos technologiczny
+składający się z:
+\begin{itemize}[nosep]
+    \item \texttt{Nginx, Unicorn} -- serwery, obsługa i balansowanie zapytań HTTP,
+    \item \texttt{Ruby on Rails} -- framework dla aplikacji serwerowej,
+    \item \texttt{PostgreSQL} -- baza danych,
+    \item \texttt{RSpec, Rake, RMagick} -- biblioteki języka Ruby oferujące
+        potrzebną funkcjonalność.
+\end{itemize}
+
+\subsubsection{Aplikacja mobilna}
+Do stworzenia aplikacji mobilnej na system operacyjny Windows Phone 8
+zostanie wykorzystany standardowy zestaw bibliotek z pakietu \texttt{.NET 4.5}.
+
+\subsection{Dokumentacja oprogramowania}
+W ramach tworzenia projektu zostaną utworzone i będą wykorzystywane dokumenty:
+\begin{itemize}
+    \item Szablony dokumentów -- wymuszają wspólny styl na dokumentach projektu
+        oraz zapewniają obecność wymaganych elementów.
+    \item Dokument stylu kodu -- do użytku wewnętrznego.
+    \item Specyfikacja funkcjonalna produktów projektu -- Powstaje podczas
+        iteracji \emph{Przygotowanie}. Jest podstawą do tworzenia specyfikacji
+        technicznej, oraz dokładnych warunków testów akceptacyjnych i metryk z
+        dokumentu kontroli jakości.
+    \item Dokumentacja techniczna API -- jeden z produktów iteracji
+        \emph{Wdrożenie}. Niezależny dokument, przeznaczony do użytku
+        zewnętrznego przez współpracowników.
+    \item Dokumentacja techniczna produktów -- tworzona jest ciągle podczas
+        trwania prac nad kodem. Opisuje interfejsy klas w kodzie źródłowym.
+        Przeznaczona do użytku wewnętrznego przez zespół projektowy.
+    \item Specyfikacja techniczna produktów -- tworzona jest ciągle w ramach
+        procesu testowania. Jest w formie wykonywalnego kodu, wchodzi w skład
+        zestawu automatycznych testów funkcjonalnych.
+\end{itemize}
